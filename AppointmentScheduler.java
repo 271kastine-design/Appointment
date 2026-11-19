@@ -33,7 +33,8 @@ public class AppointmentScheduler {
     /** TODO 3: Cancel the appointment that STARTS at the given minute, if any. */
     public boolean cancel(int startMinutes) {
         // TODO: A temporary Appointment.keyAt(startMinutes) can act as a search key.
-        return false;
+        Appointment key = Appointment.keyAt(startMinutes);
+        return schedule.remove(key);
     }
 
     /** TODO 4: Return the earliest appointment beginning at or after time. */
